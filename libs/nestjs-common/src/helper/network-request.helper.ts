@@ -1,7 +1,7 @@
 import { ApiBody, ApiExtraModels, getSchemaPath } from '@nestjs/swagger';
 import { QueryableResponseDto } from '../dto/queryable-response.dto';
 import { applyDecorators, Type } from '@nestjs/common';
-import { NetworkRequestDto } from '../dto/network-request';
+import { NetworkRequestDto } from '../dto/network-request.dto';
 
 export function NetworkRequestHelper<TModel extends Type<unknown>>(
   model: TModel,

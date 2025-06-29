@@ -1,8 +1,16 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
     "declaration": true,
-    "outDir": "./dist/libs/nestjs-common-lib",
+    "removeComments": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "esModuleInterop": true
   }
 }

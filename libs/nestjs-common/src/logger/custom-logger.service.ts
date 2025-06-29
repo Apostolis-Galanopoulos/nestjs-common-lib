@@ -1,12 +1,14 @@
-import { Injectable, LoggerService } from '@nestjs/common';
+import { Inject, Injectable, LoggerService } from '@nestjs/common';
 import * as winston from 'winston';
 
 @Injectable()
 export class CustomLogger implements LoggerService {
   private readonly logger: winston.Logger;
 
-  constructor() {
-    const app = process.env.APP_NAME || 'Parking Management Service';
+  constructor(
+    @Inject('APP_NAME') private appName
+  ) {
+    const app = this.appName || 'UnknownApp';
     const { combine, timestamp, printf, colorize, align } = winston.format;
     this.logger = winston.createLogger({
       level: 'info',

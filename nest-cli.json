@@ -1,12 +1,12 @@
 {
   "projects": {
-    "nestjs-common-lib": {
+    "nestjs-common": {
       "type": "library",
-      "root": "libs/nestjs-common-lib",
+      "root": "nestjs-common",
       "entryFile": "index",
-      "sourceRoot": "libs/nestjs-common-lib/src",
+      "sourceRoot": "libs/nestjs-common/src",
       "compilerOptions": {
-        "tsConfigPath": "libs/nestjs-common-lib/tsconfig.lib.json"
+        "tsConfigPath": "libs/nestjs-common/tsconfig.lib.json"
       }
     }
   },
